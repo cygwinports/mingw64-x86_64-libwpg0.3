@@ -1,26 +1,22 @@
 CROSS_HOST="x86_64-w64-mingw32"
 inherit cross
 
-NAME="mingw64-x86_64-libwpg0.2"
-VERSION=0.2.2
+NAME="mingw64-x86_64-libwpg0.3"
+VERSION=0.3.0
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="WordPerfect Graphics library for Win64 toolchain"
 DESCRIPTION="libwpg is a cross-platform C++ library to read and parse graphics
 in WPG (WordPerfect Graphics) format."
 HOMEPAGE="http://libwpg.sourceforge.net/"
-SRC_URI="mirror://sourceforge/libwpg/libwpg-${VERSION}.tar.gz"
+SRC_URI="mirror://sourceforge/libwpg/libwpg-${VERSION}.tar.xz"
 SRC_DIR="libwpg-${VERSION}"
-PATCH_URI="
-	0.1.3-version-info.patch
-	0.2.1-vpath.patch
-"
 
 CYGCONF_ARGS="--without-docs"
 
 src_install() {
 	cd ${B}
-	cyginstall bin_PROGRAMS=
+	cyginstall bin_PROGRAMS=  bin_SCRIPTS=
 }
 
 KEEP_LA_FILES="none"

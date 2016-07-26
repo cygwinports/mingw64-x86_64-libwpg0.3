@@ -2,7 +2,7 @@ CROSS_HOST="x86_64-w64-mingw32"
 inherit cross
 
 NAME="mingw64-x86_64-libwpg0.3"
-VERSION=0.3.0
+VERSION=0.3.1
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="WordPerfect Graphics library for Win64 toolchain"
